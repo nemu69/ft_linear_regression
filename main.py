@@ -66,6 +66,9 @@ def normalize(x):
 
 
 def main() :
+	if len(sys.argv) != 2:
+		print("Usage: python main.py <csv_file>")
+		exit(1)
 	args = sys.argv[1:]
 
 	# DataSet
@@ -77,17 +80,17 @@ def main() :
 	# check if data is empty 
 	if len(X) == 0 or len(Y) == 0:
 		print("No data to process")
-		return
+		exit(1)
 	
 	# chck is dta has a string
 	if isinstance(X[0], str) or isinstance(Y[0], str):
 		print("Data must be numeric")
-		return
+		exit(1)
 
 	# check if an data is not a number or is negative
 	if min(X) < 0 or min(Y) < 0:
 		print("Invalid data")
-		return
+		exit(1)
 
 	#if not isinstance(X[0], (int, float)) or not isinstance(Y[0], (int, float))
 	# Stabilize value
