@@ -92,7 +92,6 @@ def main() :
 		print("Invalid data")
 		exit(1)
 
-	#if not isinstance(X[0], (int, float)) or not isinstance(Y[0], (int, float))
 	# Stabilize value
 	X = normalize(X)
 

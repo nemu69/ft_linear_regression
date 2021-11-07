@@ -1,8 +1,8 @@
 # Import pandas as pd
 import pandas as pd
 
-theta0 = 7990.866013397061
-theta1 = -4610.2051096833275
+theta0 = 0
+theta1 = 0
 data = "data.csv"
 
 def normalize(x, init):
