@@ -118,7 +118,7 @@ def main() :
 		iterations += 1
 		if steps - iterations == 0:
 			print("Finish !")
-			print(iterations, "epochs elapsed and precision of ", regressor.precision())
+			print(iterations, "epochs elapsed and coefficient of determination  ", regressor.precision())
 			break
 	
 
@@ -138,7 +138,7 @@ def main() :
 			out_file.write(line)
 	
 	# Plot to verify cost fuction decreases
-	plt.figure('Cost')
+	plt.figure('Precision')
 	plt.plot(range(iterations), costs, color='b')
 	plt.show()
 
